@@ -1,0 +1,266 @@
+section {
+    margin: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: bgFade 30s infinite;
+}
+
+@keyframes bgFade {
+    0%   { background-image: url('Images/Refactory\ 1.jpg'); }
+    33%  { background-image: url('Images/Refactory\ 2.jpg'); }
+    66%  { background-image: url('Images/Refactory\ 3.jpg'); }
+    100% { background-image: url('Images/Refactory\ 4.jpg'); }
+}
+
+
+.navigation{
+
+    display: flex;
+    padding-top: 20px;
+    padding: auto;
+    
+}
+.logo{
+    padding-left: 90px;
+}
+
+
+.menu {
+    width: 100%;
+    background: transparent; 
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;             
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    padding-left: 250px;
+    padding-top: 10px;
+
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;       
+    color: white;           
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.menu:hover {
+    opacity: 0.7;  
+    transition: 1s ease;
+}
+
+.hero{
+    text-align: center;
+    color: white;
+    margin-top: 400px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-weight: 800;
+    font-size: 200;
+ 
+}
+
+
+.partner{
+    height: 40px;
+    width: 200px;
+    background-color: purple;
+    border-radius: 5px;
+    margin-right: 20px;
+    border-width:0;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+   
+}
+
+.partner::after {
+margin-left: 3px; 
+content: '\2192'; 
+right: 15px;
+}
+
+.partner:hover {
+  background-color: white; 
+  color: #7d3c98; 
+}
+
+.partner:hover::after {
+  transform: translateX(0); 
+  opacity: 1; 
+}
+
+.explore{
+    height:40px;
+    width: 200px;
+    background-color: #c6c628;
+    border-radius: 5px;
+    margin-right: 20px;
+    border-width:0;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+
+}
+
+.explore::after {
+margin-left: 3px; 
+content: '\2192'; 
+right: 15px;
+}
+
+.explore:hover {
+ background-color:white;
+  color:purple; 
+}
+
+.explore:hover::after {
+  transform: translateX(0); 
+  opacity: 1; 
+}
+
+
+.hire{
+
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: white;
+    border-width:0;
+    font-size: large;
+    font-weight: bold;
+    color: purple;
+}
+
+.hire::after {
+margin-left: 3px; 
+content: '\2192'; 
+right: 15px;
+}
+
+.hire:hover {
+ background-color:#063970;
+  color: white; 
+}
+
+.hire:hover::after {
+  transform: translateX(0); 
+  opacity: 1; 
+}
+
+
+.refactory-academy-section {
+    margin: 50px auto;
+    padding: 30px;
+    background-color:#f4f7fa; 
+    display: flex; 
+    gap: 40px; 
+    border-radius: 5px;
+}
+
+.content-container {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.title-main {
+    color: #7d3c98; 
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.title-sub {
+    color: #008080; 
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.content-container p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.image-container {
+    flex: 1.2; 
+    display: flex;
+    align-items: center;
+}
+
+.group-photo {
+    width: 100%; 
+    height: 100;
+    display: block;
+    border-radius: 5px;
+}
+
+.learn-more-button {
+    background-color: #a4c639; 
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none; 
+    font-weight: 600;
+    font-size: 1em;
+    display: inline-block;
+    
+    
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    
+    /* Styles for the arrow */
+    position: relative;
+    padding-right: 40px; 
+}
+
+/* Styling the arrow text */
+.learn-more-button::after {
+    content: '→'; 
+    position: absolute;
+    right: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease; 
+}
+
+
+.learn-more-button:hover {
+    background-color: #8fa831; 
+    transform: translateY(-1px); 
+}
+
+.learn-more-button:hover::after {
+    transform: translateY(-50%) translateX(3px); 
+}
+
+
+@media (max-width: 800px) {
+    .refactory-academy-section {
+        flex-direction: column; 
+        padding: 20px;
+    }
+    
+    .content-container, .image-container {
+        flex: auto; 
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+    
