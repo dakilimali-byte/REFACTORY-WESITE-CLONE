@@ -157,7 +157,7 @@ right: 15px;
 
 
 .refactory-academy-section {
-    margin: 50px auto;
+    margin-top: 5px;
     padding: 30px;
     background-color:#f4f7fa; 
     display: flex; 
@@ -199,10 +199,9 @@ right: 15px;
 }
 
 .group-photo {
-    width: 100%; 
-    height: 100;
+    width: 700px; 
+    height: 400px;
     display: block;
-    border-radius: 5px;
 }
 
 .learn-more-button {
@@ -243,18 +242,293 @@ right: 15px;
     transform: translateY(-50%) translateX(3px); 
 }
 
+/* General reset for this section */
+.courses-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* White background */
+    font-family: Arial, sans-serif; /* Use a common font */
+    text-align: center; /* Center the entire section content */
+}
 
-@media (max-width: 800px) {
-    .refactory-academy-section {
-        flex-direction: column; 
-        padding: 20px;
+/* Header Styling */
+.courses-subheading {
+    color: #008080; /* Teal/green color for 'Start Your Dream Career!' */
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.courses-heading {
+    color: #800080; /* Purple color for 'Explore Featured Courses' */
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+/* Container for the three cards - uses Flexbox */
+.courses-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between the cards */
+    max-width: 1200px; /* Optional: limit the max width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Individual Course Card Styling */
+.course-card {
+    flex: 1; /* Allows the card to grow/shrink equally */
+    max-width: 350px;
+    text-align: left; /* Align content inside the card to the left */
+    color: #333; /* Default text color */
+}
+
+.course-image {
+    width: 100%;
+    height: auto;
+    /* Optional: Aspect ratio to match the original image */
+    aspect-ratio: 3 / 2; 
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.course-title {
+    color: #800080; /* Purple for titles */
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    color: #585858; /* Darker gray for description */
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Learn More Button Styling */
+.course-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #c9e658; /* Distinct lime-green/yellow color */
+    color: #333; /* Dark text for contrast */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.course-button:hover {
+    background-color: #b2cc4d; /* Slightly darker on hover */
+}
+
+/* Responsive Design for smaller screens (e.g., mobile) */
+@media (max-width: 900px) {
+    .courses-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
     }
-    
-    .content-container, .image-container {
-        flex: auto; 
-        width: 100%;
+
+    .course-card {
+        max-width: 100%; /* Allow cards to take full width */
+        margin-bottom: 30px;
     }
 }
+
+/* --- Footer Structure and Background --- */
+
+.main-footer {
+    background-color: #3b0a6e; /* Deep purple background */
+    color: #ffffff; /* Default white text color for contrast */
+    padding: 50px 20px 20px;
+    font-family: Arial, sans-serif;
+    position: relative; /* Needed for any background patterns/graphics */
+    overflow: hidden; /* Hide pattern overflow */
+    /* Add a subtle dark overlay to help text stand out */
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)); 
+}
+
+/* Flexbox for the main four-column layout */
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 30px; /* Center container and add bottom margin */
+    padding-bottom: 20px;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+.footer-column {
+    /* Define base width for columns (roughly 25% minus gaps) */
+    width: 23%; 
+    min-width: 200px; /* Ensure a minimum size */
+    margin-bottom: 30px; 
+}
+
+/* --- Column 1: Logo and About --- */
+
+.footer-logo {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+}
+
+.logo-dot {
+    color: #7ce0c7; /* Light teal color for the arrow/dot */
+}
+
+.about-text {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #c0c0c0; /* Lighter gray for descriptive text */
+}
+
+/* Social Icons Container (Flexbox for alignment) */
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #494949; /* Default background for icons */
+    /* Placeholder for actual icon image/SVG */
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.3s;
+}
+
+/* Applying distinct background colors for social icons */
+.facebook { background-color: #3b5998; }
+.twitter { background-color: #00acee; }
+.instagram { background-color: #c13584; }
+.linkedin { background-color: #0e76a8; }
+.youtube { background-color: #ff0000; }
+
+/* --- Column 2: Resources (Links) --- */
+
+.column-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #7ce0c7; /* Teal color for all column headers */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resources li {
+    margin-bottom: 8px;
+}
+
+.resources a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s;
+}
+
+.resources a:hover {
+    color: #7ce0c7;
+}
+
+/* --- Column 3: Get in touch (Contact) --- */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.contact-icon {
+    margin-right: 10px;
+    font-size: 1.1em; /* Adjust emoji size */
+    color: #7ce0c7; /* Teal color for the icons/emojis */
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* --- Column 4: Visit us (Location) --- */
+
+.address-text {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.location-link {
+    color: #7ce0c7; /* Teal color for the "Location" link */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.location-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer Bottom (Divider and Copyright) --- */
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: #4a1c7c; /* Lighter purple/darker shade of the background */
+    margin: 10px 0 20px;
+}
+
+.copyright-text {
+    color: #c0c0c0;
+    font-size: 0.85em;
+    margin: 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .footer-column {
+        width: 45%; /* Switch to a two-column layout */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-column {
+        width: 100%; /* Stack columns vertically on mobile */
+        min-width: auto;
+    }
+    
+    .about-us {
+        order: -1; /* Place the main info column first on mobile */
+    }
+}
+    
 
 
 
